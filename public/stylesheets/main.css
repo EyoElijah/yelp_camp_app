@@ -1,0 +1,52 @@
+.img-thumbnail {
+    width: 100%;
+    padding: 0;
+}
+
+.caption-full {
+    padding: 9px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#delete-form {
+    display: inline;
+}
+
+#edit-btn {
+    color: #fff;
+}
+
+#head {
+    text-align: center;
+}
+
+.new-camp {
+    font-size: 30px;
+}
+
+.add-camp {
+    font-size: 28px;
+}
+
+.d-flex {
+    text-align: left;
+}
+
+.containerStyle {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+#delete-form {
+    display: inline;
+}

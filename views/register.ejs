@@ -1,0 +1,21 @@
+<%-include('./partials/header')%>
+    <div class="container containerStyle">
+        <div class="row">
+
+            <div style="width: 35%; margin: 26px auto;">
+                <h2 id="head">Sign Up</h2>
+                <form action="/register" method="post">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="username" placeholder="username">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="password" name="password" placeholder="password">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-block btn-primary" type="submit">Submit</button>
+                    </div>
+                </form>
+                <a href="/campgrounds">Back Page</a>
+            </div>
+
+            <%-include('./partials/footer')%>
