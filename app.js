@@ -1,6 +1,7 @@
-var express = require('express'),
-    bodyParser = require('body-parser'),
-    mongoose = require('mongoose'),
+require('./config/config');
+
+let express = require('express'),
+    { mongoose } = require('./db/mongoose'),
     Campground = require('./models/campground'),
     passport = require('passport'),
     localStrategy = require('passport-local'),
@@ -11,13 +12,16 @@ var express = require('express'),
     app = express(),
     seedDB = require('./seeds');
 
+const port = process.env.PORT;
+
 var commentRoutes = require('./routes/comments'),
     campgroundRoutes = require('./routes/campgrounds'),
     indexRoutes = require('./routes/index');
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.set('view engine', 'ejs');
-mongoose.connect('mongodb://localhost/yelp_camp_5');
+
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride('_method'));
 app.use(flash());
@@ -51,6 +55,6 @@ app.use(indexRoutes);
 app.use('/campgrounds', campgroundRoutes);
 app.use('/campgrounds/:id/comments', commentRoutes);
 
-app.listen(7000, () => {
-    console.log('sever has started');
+app.listen(port, () => {
+    console.log(`Started at port ${port}`);
 });
