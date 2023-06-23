@@ -1,5 +1,3 @@
-require('./config/config');
-
 let express = require('express'),
 	{ mongoose } = require('./db/mongoose'),
 	Campground = require('./models/campground'),
@@ -12,10 +10,13 @@ let express = require('express'),
 	app = express(),
 	seedDB = require('../seeds'),
 	ejs = require('ejs'),
-	path = require('path');
+	path = require('path'),
+	dotenv = require('dotenv');
 
 const port = process.env.PORT;
 const secret = process.env.SECRET;
+
+dotenv.config();
 
 var commentRoutes = require('./routes/comments'),
 	campgroundRoutes = require('./routes/campgrounds'),

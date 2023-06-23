@@ -1,4 +1,6 @@
-let mongoose = require('mongoose');
+const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+dotenv.config();
 
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI, {
