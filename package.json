@@ -9,7 +9,7 @@
 		"test-watch": "nodemon src/app.js"
 	},
 	"engines": {
-		"node": "15.10.0"
+		"node": "18.x"
 	},
 	"author": "Eyo Elijah",
 	"license": "ISC",
